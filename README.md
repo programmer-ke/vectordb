@@ -1,5 +1,9 @@
 # VectorDB
 
+**Note**: Some local changes made here:
+- drop depency on tensorflow and use pytorch with sentence transformers
+- Pass full model identifier into `Memory` e.g. `BAAI/bge-small-en-v1.5`
+
 
 VectorDB is a simple, lightweight, fully local, end-to-end solution for using embeddings-based text retrieval.
 
@@ -65,14 +69,7 @@ embeddings="normal")**
   `{'mode':'paragraph'}`
 - `embeddings`: *Optional.* 
   
-   Options:\
-   `fast` - Uses Universal Sentence Encoder 4\
-   `normal` - Uses "BAAI/bge-small-en-v1.5" (default)\
-   `best` - Uses "BAAI/bge-base-en-v1.5"\
-   `multilingual` - Uses Universal Sentence Encoder Multilingual Large 3
-
-
-   You can also specify a custom HuggingFace model by name eg. `TaylorAI/bge-micro-v2`. See also [Pretrained models](https://www.sbert.net/docs/pretrained_models.html) and [MTEB](https://huggingface.co/spaces/mteb/leaderboard).
+   You can specify a custom HuggingFace model by name eg. `TaylorAI/bge-micro-v2`. See also [Pretrained models](https://www.sbert.net/docs/pretrained_models.html) and [MTEB](https://huggingface.co/spaces/mteb/leaderboard).
 
 **Memory.save(texts, metadata, memory_file=None)**
 

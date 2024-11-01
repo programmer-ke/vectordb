@@ -24,14 +24,14 @@ class Memory:
         self,
         memory_file: str = None,
         chunking_strategy: dict = None,
-        embeddings: Union[BaseEmbedder, str] = "normal",
+        embeddings: Union[BaseEmbedder, str] = "BAAI/bge-small-en-v1.5",
     ):
         """
         Initializes the Memory class.
 
         :param memory_file: a string containing the path to the memory file. (default: None)
         :param chunking_strategy: a dictionary containing the chunking mode (default: {"mode": "sliding_window"}).
-        :param embedding_model: a string containing the name of the pre-trained model to be used for embeddings (default: "sentence-transformers/all-MiniLM-L6-v2").
+        :param embedding_model: a string containing the name of the pre-trained model to be used for embeddings
         """
         self.memory_file = memory_file
 
